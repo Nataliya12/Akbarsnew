@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="">
+    <title>Ак барс Банк</title>
+    {% load staticfiles %}
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <link rel="stylesheet" href="https://bootstraptema.ru/plugins/bootstrap/v3/3-3-6/bootstrap.css" />
+    <link rel="stylesheet" href="https://bootstraptema.ru/plugins/font-awesome/4-4-0/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" />
+    <script src="https://bootstraptema.ru/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+</head>
+<body>
+    <style>
+        .text1 {
+            line-height: 1,5;
+            text-align: justify;
+        }
+    </style>
+    <div class="container">
+        <div class="jumbotron" style="background-color:rgb(181, 236, 220)">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="/">Главная страница</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/newday/">Новости дня<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/portal/">Портал<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/sertification/">Аттестация<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout/">Выход<span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <img src="{% static 'image/ak.png' %}" img style="float: right">
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="jumbotron" style="background-color:rgb(181, 236, 220)">
+            <div class="jumbotron">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text1">
+                                <h4>Добавлена дополнительная информация по карте "Ак Барс Premium"</h4>
+                                <p5>При расчете среднедневной суммы остатков учитываются все банковские счета Клиента, держателя основной карты Visa Platinum PayWave. 
+                                Под счетами понимаются текущие счета, счета по срочным вкладам (за исключением срочных вкладов, 
+                                отнесенных к премиальным вкладам в соответствии с «Едиными тарифами по срочным вкладам значимых клиентов-физических лиц в российских рублях, 
+                                долларах США, евро ПАО „АК БАРС“ БАНК »), счета по вкладам до востребования и банковские счета дебетовых карт 
+                                (в случае, если карта с установленным лимитом овердрафта, учитывается только сумма личных средств). 
+                                При расчете суммы остатков учитывается остаток по операциям, обработанным банком, независимо от фактической даты ее осуществления 
+                                Клиентом. Счета, открытые в валюте, отличной от рублей РФ, будут пересчитываться по курсу Банка России на дату учета остатка. 
+                                В общем объеме операций оплаты товаров и услуг, произведенных клиентом за календарный месяц в торгово-сервисных предприятиях,
+                                учитываются операции, обработанные банком, независимо от фактической даты ее осуществления клиентом.</p5>
+                            </div>
+                        </div><!-- ./col-md-12 -->
+                    </div><!-- ./row -->
+                </div><!-- ./container -->
+            </div>
+        </div>
+        <p class="rig">Поддержка: Mamaevaolesa9@gmail.com</p>
+        <div style="clear: left"></div>
+    </div>
+</body>
+</html>

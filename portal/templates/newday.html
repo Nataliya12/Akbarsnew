@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="">
+    <title>Ак барс Банк</title>
+    {% load staticfiles %}
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <link rel="stylesheet" href="https://bootstraptema.ru/plugins/bootstrap/v3/3-3-6/bootstrap.css" />
+    <link rel="stylesheet" href="https://bootstraptema.ru/plugins/font-awesome/4-4-0/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" />
+    <script src="https://bootstraptema.ru/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron" style="background-color:rgb(181, 236, 220)">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="/">Главная страница</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/newday/">Новости дня<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/portal/">Портал<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/sertification/">Аттестация<span class="sr-only">(current)</span></a>
+                        </li> 
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout/">Выход<span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <img src="{% static 'image/ak.png' %}" img style="float: right">
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="jumbotron" style="background-color:rgb(181, 236, 220)">
+            <div class="jumbotron">
+
+                <script>
+                    $(document).ready(function () {
+                        $("#news-slider").owlCarousel({
+                            items: 3,
+                            itemsDesktop: [1199, 3],
+                            itemsDesktopSmall: [1000, 2],
+                            itemsMobile: [650, 1],
+                            pagination: false,
+                            navigationText: false,
+                            autoPlay: true
+                        });
+                    });
+                </script>
+
+                <br><br><br>
+
+                <style>
+                    .post-slide {
+                        margin: 0 15px;
+                        border-bottom: 1px solid #dadada;
+                        box-shadow: 0 0 5px rgba(167, 197, 167, 0.8);
+                        transition: all 0.4s ease-in-out 0s;
+                    }
+
+                        .post-slide .post-img {
+                            position: relative;
+                            overflow: hidden;
+                        }
+
+                            .post-slide .post-img:before {
+                                content: "";
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                background: rgba(0, 0, 0, 0);
+                                transition: all 0.4s linear 0s;
+                            }
+
+                        .post-slide:hover .post-img:before {
+                            background: rgba(0, 0, 0, 0.6);
+                        }
+
+                        .post-slide .post-img img {
+                            width: 100%;
+                            height: auto;
+                        }
+
+                        .post-slide .category {
+                            width: 40%;
+                            font-size: 16px;
+                            color: #fff;
+                            line-height: 11px;
+                            text-align: center;
+                            text-transform: capitalize;
+                            padding: 11px 0;
+                            background: #9B7DF5;
+                            position: absolute;
+                            bottom: 0;
+                            left: -50%;
+                            transition: all 0.5s ease-in-out 0s;
+                        }
+
+                        .post-slide:hover .category {
+                            left: 0;
+                        }
+
+                        .post-slide .post-review {
+                            padding: 25px 20px;
+                            background: #fff;
+                            position: relative;
+                        }
+
+                        .post-slide .post-title {
+                            margin: 0;
+                        }
+
+                            .post-slide .post-title a {
+                                display: inline-block;
+                                font-size: 16px;
+                                color: #9B7DF5;
+                                font-weight: bold;
+                                letter-spacing: 2px;
+                                text-transform: uppercase;
+                                margin-bottom: 25px;
+                                transition: all 0.30s linear 0s;
+                            }
+
+                                .post-slide .post-title a:hover {
+                                    text-decoration: none;
+                                    color: #555;
+                                }
+
+                        .post-slide .post-description {
+                            font-size: 15px;
+                            color: #555;
+                            line-height: 26px;
+                        }
+
+                    .post-review .post-bar {
+                        margin-top: 20px;
+                    }
+
+                    .post-bar span {
+                        display: inline-block;
+                        font-size: 14px;
+                    }
+
+                        .post-bar span i {
+                            margin-right: 5px;
+                            color: #999;
+                        }
+
+                        .post-bar span a {
+                            color: #999;
+                            text-transform: uppercase;
+                        }
+
+                            .post-bar span a:hover {
+                                text-decoration: none;
+                                color: #9B7DF5;
+                            }
+
+                        .post-bar span.comments {
+                            float: right;
+                        }
+
+                    @media only screen and (max-width: 359px) {
+                        .post-slide .category {
+                            font-size: 13px;
+                        }
+                    }
+                </style>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div id="news-slider" class="owl-carousel">
+                                <div class="post-slide">
+                                    <div class="post-img">
+                                        <img src="{% static 'image/gen.png' %}" alt="Bootstrap Blocks Owl Carousel 1" />
+                                        <div class="category">Сегодня</div>
+                                    </div>
+                                    <div class="post-review">
+                                        <h3 class="post-title"><a href="#">Карта “Generation”</a></h3>
+                                        <p class="post-description">
+                                            Изменился срок действия кэшбэк-рублей с полугода на 1 год.  При конвертации деньги поступают на счет в течение 1 рабочего дня.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="post-slide">
+                                    <div class="post-img">
+                                        <img src="{% static 'image/ipotek.jpg' %}" alt="Bootstrap Blocks Owl Carousel 2" />
+                                        <div class="category">Сегодня</div>
+                                    </div>
+                                    <div class="post-review">
+                                        <h3 class="post-title"><a href="#">Программа “Мегаполис”</a></h3>
+                                        <p class="post-description">
+                                            ИПОТЕЧНЫЙ КРЕДИТ. Теперь минимальная сумма кредита 500 000 рублей.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="post-slide">
+                                    <div class="post-img">
+                                        <img src="{% static 'image/images.png' %}" alt="Bootstrap Blocks Owl Carousel 3" />
+                                        <div class="category">Сегодня</div>
+                                    </div>
+                                    <div class="post-review">
+                                        <h3 class="post-title"><a href="#">ПОТРЕБИТЕЛЬСКИЙ КРЕДИТ</a></h3>
+                                        <p class="post-description">
+                                            Изменилась процентная ставка без страхования. Ранее проценты варьировались от 14% до 19%, теперь это значение составляет от 13% до 17,9%.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="post-slide">
+                                    <div class="post-img">
+                                        <img src="{% static 'image/credit.png' %}" alt="Bootstrap Blocks Owl Carousel 4" />
+                                        <div class="category">Вчера</div>
+                                    </div>
+                                    <div class="post-review">
+                                        <h3 class="post-title"><a href="#">Кредитная карта “Emotion”</a></h3>
+                                        <p class="post-description">
+                                            Изменилась комиссия за получение наличных. До 10 000 ₽ в месяц - не взимается. Свыше 10 000 ₽ в месяц - 3,9% от суммы снятия, минимум 300 ₽.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="post-slide">
+                                    <div class="post-img">
+                                        <img src="{% static 'image/vklad.jpg' %}" alt="Bootstrap Blocks Owl Carousel 4" />
+                                        <div class="category">Вчера</div>
+                                    </div>
+                                    <div class="post-review">
+                                        <h3 class="post-title"><a href="#">ВКЛАД</a></h3>
+                                        <p class="post-description">
+                                            Добавлена возможность открытие вклада на 2 года с процентной ставкой 5 %.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div><!-- ./col-md-12 -->
+                    </div><!-- ./row -->
+                </div><!-- ./container -->
+            </div>
+        </div>
+        <p class="rig">Поддержка: Mamaevaolesa9@gmail.com</p>
+        <div style="clear: left"></div>
+    </div>
+</body>
+</html>

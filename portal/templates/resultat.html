@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="">
+    <title>Ак барс Банк</title>
+    {% load staticfiles %}
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <link rel="stylesheet" href="https://bootstraptema.ru/plugins/bootstrap/v3/3-3-6/bootstrap.css" />
+    <link rel="stylesheet" href="https://bootstraptema.ru/plugins/font-awesome/4-4-0/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" />
+    <script src="https://bootstraptema.ru/plugins/jquery/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+</head>
+<body>
+    <style>
+        .form-horizontal {
+            background: #eeeeee;
+            border-radius: 15px;
+            text-align: center;
+            margin-left:0px;
+            width: 800px;
+            height:200px;
+        }
+        .jumbotron p {
+            text-align: center;
+            font-size: 14px;
+        }   
+        .text1 {
+            line-height: 1,5;
+            text-align: justify;
+        }
+    </style>
+    <div class="container">
+        <div class="jumbotron" style="background-color:rgb(181, 236, 220)">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="/">Главная страница</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/newday/">Новости дня<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/portal/">Портал<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/sertification/">Аттестация<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout/">Выход<span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <img src="{% static 'image/ak.png' %}" img style="float: right">
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="jumbotron" style="background-color:rgb(181, 236, 220)">
+            <div class="jumbotron">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            {% if questions_for_user_false %}
+                            {% for i in questions_for_user_false %}
+                            {% if forloop.first %}
+                            <form class="form-horizontal" action='#' method='post' enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <br />
+                                <div class="vopros">
+                                    <p>{{i.questions.name|safe}}</p>
+                                </div>
+                                {% for answer in i.questions.answer_set.all %}
+                                <div class="radio1">
+                                    <label>
+                                        <input required type="radio" name="galochka" id="galochka" value="{{answer.id}}">
+                                        {{answer.otvet}}
+                                    </label>
+                                </div>
+                                {% endfor %}
+                                <input type="hidden" class="form-control" id="que_id" name="que_id" value="{{i.id}}">
+                                <br />
+                                <input id="clickjsone" type="submit" class="btn btn-default" value="Ответить" name="answer" style="margin-right:270px; width:30%">
+                            </form>
+                            {% endif %}
+                            {% endfor %}
+                            {% else %}
+
+                            <div class="text1">
+                            <h4>Аттестация пройдена. Ваше колличество правильных ответов: {{sum}}</h4>
+
+                            <p5>Обратите внимание, что количество правильных ответов влияют на индивидуальную оценку ежемесячной производительности. Расчет коэффицента ведется по следующим образом:</p5>
+                            <h5>От 15 до 13 правильных ответов - 2.0 коэффицент</h5>
+                            <h5> От 13 до 10 правильных ответов - 1.5 коэффицент</h5>
+                            <h5>От 10 до 7 правильных ответов - 1.0 коэффицент</h5>
+                            <h5>От 7 до 5 правильных ответов - 0.5 коэффицент</h5>
+                            <h5>Ниже 5 правильных ответов - 0 коэффицент</h5>
+                            <h5>Дополнительную информацию по расчету индивидуальной оценки ежемесячной производительности
+                                Вы можете узнать у своего тимлидера.</h5>
+                            </div>
+                                {% endif %}
+                        </div><!-- ./col-md-12 -->
+                    </div><!-- ./row -->
+                </div><!-- ./container -->
+            </div>
+        </div>
+        <p class="rig">Поддержка: Mamaevaolesa9@gmail.com</p>
+        <div style="clear: left"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="">
+    <title>Ак барс Банк</title>
+    {% load staticfiles %}
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron" style="background-color:rgb(181, 236, 220)">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="/">Главная страница</a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/newday/">Новости дня<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/portal/">Портал<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/sertification/">Аттестация<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout/">Выход<span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <img src="{% static 'image/ak.png' %}" img style="float: right">
+            </nav>
+        </div>
+    </div>
+
+
+
+
+    <style>
+        .glyphicon {
+            margin-right: 4px !important; /*override*/
+        }
+
+        .pagination .glyphicon {
+            margin-right: 0px !important; /*override*/
+        }
+
+        .pagination a {
+            color: #555;
+        }
+
+        .panel ul {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+
+        .news-item {
+            padding: 4px 4px;
+            margin: 0px;
+            border-bottom: 1px dotted #555;
+        }
+    </style>
+    <div class="container">
+        <div class="jumbotron" style="background-color:rgb(181, 236, 220)">
+            <div class="jumbotron">
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <span class="glyphicon glyphicon-list-alt"></span><b>Март</b>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <ul class="demo1">
+                                                <li class="news-item">
+                                                    <strong>10.03.20</strong><br />
+                                                    Рефинансирование ИК - опубликовано требование к Заемщику...<a href="/portal/new1/">Подробнее...</a></td>
+                                                </li>
+                                                <li class="news-item">Выпущена новая карта "Aurum"...<a href="/portal/new2/">Подробнее...</a></li>
+                                                <li class="news-item">
+                                                    <strong>15.03.20</strong><br />
+                                                    Изменение условий Потребительского кредита... <a href="/portal/new3/">Подробнее...</a>
+                                                </li>
+                                                <li class="news-item">
+                                                    <strong>18.03.20</strong><br />
+                                                    Изменилась минимальная сумма кредта по программе “Мегаполис”... <a href="/portal/new4/">Подробнее...</a>
+                                                </li>
+                                                <li class="news-item">
+                                                    Добавлены новые требования по ипотеке на коммерческую недвижимость... <a href="/portal/new5/">Подробнее...</a>
+                                                </li>
+                                                <li class="news-item">
+                                                    <strong>21.03.20</strong><br />
+                                                    Изменение процентной ставки вклада...<a href="/portal/new6/">Подробнее...</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <span class="glyphicon glyphicon-list-alt"></span><b>Апрель</b>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <ul class="demo2">
+                                                <strong>02.04.20</strong>
+                                                <br />
+                                                <li class="news-item">Изменение в условии обслуживания Индивидуального банковского сейфа... <a href="/portal/new8/">Подробнее...</a></li>
+                                                <li class="news-item">Опубликован подробный порядок предоставления налогового вычета самозанятых... <a href="/portal/new9/">Подробнее...</a></li>
+                                                <strong>12.04.20</strong>
+                                                <br />
+                                                <li class="news-item">Изменение условий кредита под залог недвижимости со страхованием... <a href="/portal/new10/">Подробнее...</a></li>
+                                                <strong>17.04.20</strong>
+                                                <br />
+                                                <li class="news-item">Опубликован развернутый список операций над ценными бумагами... <a href="/portal/new11/">Подробнее...</a></li>
+                                                <strong>26.04.20</strong>
+                                                <br />
+                                                <li class="news-item">Изменение лимита кредитования карты "Emotion"... <a href="/portal/new12/">Подробнее...</a></li>
+                                                <li class="news-item">Добавлена дополнительная информация по карте "Ак Барс Premium"... <a href="/portal/new13/">Подробнее...</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <span class="glyphicon glyphicon-list-alt"></span><b>Май</b>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <ul id="demo3">
+                                                <li class="news-item">
+                                                    <strong>08.05.20</strong>
+                                                    <br />
+                                                    Изменения условий карты Ак Барс Premium... <a href="/portal/new7/">Подробнее...</a>
+                                                </li>
+                                                <li class="news-item">
+                                                    <strong>15.05.20</strong>
+                                                    <br />
+                                                    Вложение средств с помощью Еврооблигаций... <a href="/portal/new15/">Подробнее...</a>
+                                                </li>
+                                                <li class="news-item">
+                                                    <strong>29.05.20</strong>
+                                                    <br />
+                                                    Опубликована подробная информация по Депозитарию... <a href="/portal/new16/">Подробнее...</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <span class="glyphicon glyphicon-list-alt"></span><b>Июнь</b>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <ul class="demo2">
+                                                    <strong>04.06.20</strong>
+                                                    <br />
+                                                    <li class="news-item">Изменение в условии ипотеки на коммерческую недживимость... <a href="/portal/new17/">Подробнее...</a></li>
+                                                    <strong>09.06.20</strong>
+                                                    <br />
+                                                    <li class="news-item">Добработана функция начисления на остаток по карте "Generation"... <a href="/portal/new18/">Подробнее...</a></li>
+                                                    <strong>13.06.20</strong>
+                                                    <br />
+                                                    <li class="news-item">Изменение срока действия карты "Aurum"... <a href="/portal/new19/">Подробнее...</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script type="text/javascript">
+                    $(function () {
+                        $(".demo1").bootstrapNews({
+                            newsPerPage: 5,
+                            autoplay: true,
+                            pauseOnHover: true,
+                            direction: 'up',
+                            newsTickerInterval: 4000,
+                            onToDo: function () {
+                                //console.log(this);
+                            }
+                        });
+
+                        $(".demo2").bootstrapNews({
+                            newsPerPage: 4,
+                            autoplay: true,
+                            pauseOnHover: true,
+                            navigation: false,
+                            direction: 'down',
+                            newsTickerInterval: 2500,
+                            onToDo: function () {
+                                //console.log(this);
+                            }
+                        });
+
+                        $("#demo3").bootstrapNews({
+                            newsPerPage: 3,
+                            autoplay: false,
+
+                            onToDo: function () {
+                                //console.log(this);
+                            }
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+        <p class="rig">Поддержка: Mamaevaolesa9@gmail.com</p>
+        <div style="clear: left"></div>
+    </div>
+</body>
+</html>
